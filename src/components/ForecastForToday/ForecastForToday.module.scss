@@ -1,0 +1,56 @@
+@import "../../utils/reset";
+@import "../../utils/mixins";
+
+.forecast_for_today_container {
+   width: 25vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+
+   @include onLaptop {
+      width: 100vw;
+      height: auto;
+      padding: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   @include onLaptopSmall {
+      width: 100vw;
+      height: auto;
+      padding: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   .forecast_for_today {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .day {
+         font-size: 30px;
+         font-weight: 600;
+      }
+
+      div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 10px;
+
+         p{
+            font-size: 50px;
+         }
+      }
+
+      .address {
+         font-size: 24px;
+      }
+   }
+}

@@ -1,0 +1,32 @@
+@import "../../utils/reset";
+@import "../../utils/mixins";
+
+.add_trip {
+  width: 230px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.15);
+  cursor: pointer;
+  transition: 0.8s;
+  font-size: 20px;
+  font-weight: 500;
+  color: #282c34;
+
+  @include onLaptop {
+    border-radius: 12px;
+    height: 80px;
+    width: 92.5%;
+  }
+
+  &:hover {
+    transform: scale(0.9);
+    transition: 0.8s;
+  }
+
+  img {
+    width: 30px;
+  }
+}

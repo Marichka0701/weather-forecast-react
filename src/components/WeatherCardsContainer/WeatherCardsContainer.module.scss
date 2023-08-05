@@ -1,0 +1,68 @@
+@import "../../utils/reset";
+@import "../../utils/mixins";
+
+.weather_cards_container {
+  position: relative;
+
+  .slider {
+    display: flex;
+    overflow-x: hidden;
+    gap: 40px;
+
+    @include onLaptop {
+      flex-flow: row wrap;
+      gap: 30px;
+      justify-content: space-around;
+    }
+
+    @include onMobileLarge {
+      gap: 5px;
+    }
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+
+    &.none {
+      display: none;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .prev {
+    left: -25px;
+
+    @include onMobileLarge {
+      left: 35px;
+    }
+
+    @include onMobileSmall {
+      left: 25px;
+    }
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .next {
+    right: -25px;
+
+    @include onMobileLarge {
+      right: 35px;
+    }
+
+    @include onMobileSmall {
+      right: 20px;
+    }
+  }
+}

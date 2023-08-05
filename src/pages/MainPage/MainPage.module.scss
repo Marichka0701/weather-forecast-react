@@ -1,0 +1,16 @@
+@import "src/utils/reset";
+@import "../../utils/mixins";
+
+.main_page {
+  display: flex;
+
+  @include onLaptop {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  @include onLaptopSmall {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}

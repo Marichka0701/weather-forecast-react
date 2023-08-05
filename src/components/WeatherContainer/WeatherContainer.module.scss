@@ -1,0 +1,45 @@
+@import "../../utils/reset";
+@import "../../utils/mixins";
+
+.weather_container {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include onLaptop {
+    width: auto;
+    align-items: center;
+    height: auto;
+  }
+
+  @include onLaptopSmall {
+    width: 100vw;
+    height: auto;
+  }
+
+  &.close {
+    padding: 40px;
+
+    @include onLaptop {
+      padding: 20px;
+      justify-content: center;
+    }
+  }
+
+  &.open {
+    padding: 0;
+  }
+
+  .cards {
+    display: flex;
+    gap: 40px;
+
+    @include onLaptop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

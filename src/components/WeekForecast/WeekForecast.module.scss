@@ -1,0 +1,83 @@
+@import "../../utils/reset";
+@import "../../utils/mixins";
+
+.week_forecast {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include onLaptop {
+    width: 92%;
+  }
+
+  h2 {
+    text-align: left;
+    color: #282c34;
+  }
+
+  .days_container {
+    display: flex;
+    gap: 40px;
+
+    @include onLaptop {
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      gap: 30px;
+    }
+
+    @include onLaptopSmall {
+      gap: 23px;
+    }
+  }
+
+  .prev, .next {
+    position: absolute;
+    display: flex;
+    top: 90px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+
+    &.none {
+      display: none;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .prev {
+    left: -30px;
+
+    @include onMobileLarge {
+      left: -15px;
+    }
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .next {
+    right: 90px;
+
+    @include onLaptop {
+      right: -50px;
+    }
+
+    @include onMobileLarge {
+      right: -30px;
+    }
+
+    @include onLaptopMedium {
+      right: -30px;
+    }
+
+    @include onMobileSmall {
+      right: -25px;
+    }
+  }
+}

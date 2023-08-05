@@ -1,0 +1,17 @@
+@import "../../../utils/reset";
+
+.day_forecast {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  img {
+    width: 50px;
+  }
+
+  p:nth-child(1) {
+    color: rgb(128, 128, 128);
+  }
+}
